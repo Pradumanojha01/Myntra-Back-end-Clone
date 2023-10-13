@@ -1,0 +1,14 @@
+call ShowALLDetails();
+
+USE `myntraclone`;
+DROP procedure IF EXISTS `ShowAllDetails`;
+DELIMITER $$
+USE `myntraclone` $$
+CREATE PROCEDURE ShowAllDetails()
+BEGIN
+SELECT * FROM customer;
+SELECT * FROM address;
+SELECT * FROM customer_authentication;
+select * from jwt_refresh_token;
+END $$
+DELIMITER ;
